@@ -261,3 +261,29 @@ a:hover {
 	background-position: center;
 	background-attachment: fixed;
 }
+
+
+
+
+/*FORMS */
+
+.form-input {
+	display: inline-block;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0.2em 0.5em;
+    font-size: inherit;
+    -webkit-appearance: none;
+    color: inherit;
+    width: 100%;
+    border-bottom: 1px solid var(--color-neutral-medium);
+    outline: 0;
+}
+
+.form-input:focus {
+	border-bottom-color:var(--color-main-medium);
+}
+
+
+
+

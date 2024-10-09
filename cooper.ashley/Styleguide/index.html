@@ -41,6 +41,11 @@
 					<li><a href="#navigations">Navigations</a></li>
 					<li><a href="#gridsystem">Grid System</a></li>
 					<li><a href="#flexsystem">Flex System</a></li>
+					<li><a href="#tables">Tables</a></li>
+					<li><a href="#forms">Forms</a></li>
+					<ul>
+						<lis><a href="#inputs">Inputs</a></lis>
+					</ul>
 				</ul>
 
 			</nav>
@@ -70,7 +75,7 @@
 	</div>
 
 
-	<div class="container">
+	<div class="container" id="cards">
 		<h3>Cards</h3>
 
 		<div class="grid gap">
@@ -96,7 +101,7 @@
 	</div>
 
 	
-	<div class="container">
+	<div class="container" id="viewwindow">
 		<h2>View Window</h2>
 	</div>
 
@@ -168,16 +173,70 @@
 	</div>
 
 
-	<div class="container">
+	<div class="container" id="gridsystem">
 		<h2>Grid System</h2>
 	</div>
 
 
-	<div class="container">
+	<div class="container" id="flexsystem">
 		<h2>Flex System</h2>
 	</div>
 
 
+	<script>
+		const makeTable = (classes='') => {
+			const body = [
+				['1993', "Ashley Cooper", 'acooper17@art.edu', '24034'],
+				['2021', "Akir Booth", 'info@emmanuelestatesllc.org', '24034'],
+				['1994', "Frank Cooper", 'frankcooper@gmail.com', '24034'],
+				['1992', "Gloria Cooper", 'gloriacooper@yahoo.com', '24034'],
+				['1970', "Sharun Cooper", 'sharuncooper@gmail.com', '24034'],
+			];
+
+			// let ran = Math.floor(Math.random()*links.length);
+			document.write(`
+				<table class="${classes}">
+					<thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
+					<tbody>${body.reduce((r,o,i)=>r+
+						`<tr>${
+							[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+						}</tr>`,'')
+				}</tbody>
+				</table>
+				`;
+		}
+	</script>
+
+
+	<div class="container">
+		<h2>Tables</h2>
+	</div>
+
+
+	<div class="container" id="forms">
+		<h2>Forms</h2>
+		<h3>Inputs</h3>
+
+		<div class="card soft">
+			<h3>Default Inputs</h3>
+			<form>
+				<input type="text"><br>
+				<input type="number"><br>
+				<input type="password"><br>
+				<input type="url"><br>
+				<input type="email"><br>
+				<input type="datetime-local"><br>
+				<input type="date"><br>
+				<input type="search">
+			</form>
+
+			<h3>Form Input</h3>
+			<form>
+				<input type="text" class="form-input">
+			</form>
+		</div>
+
+	</div>
 	
 </body>
 </html>
